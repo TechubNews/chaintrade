@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>币圈投资必看, 老板的 Web3 商学院</title>
+    <title>零基础学炒币</title>
     <meta name="description" content="立即获取【交易核心策略】的独家策略和分析报告，抓住最新交易机会！点击添加好友，免费咨询交易专家。">
     <meta name="keywords" content="加密货币, 比特币, BTC, Bitcoin, ETH, 以太坊, 稳定币, 交易策略, 交易分析, 投资机会, 股票, 期货, 外汇, 量化交易">
-    <link rel="canonical" href="https://trade.techub.news/">
+    <link rel="canonical" href="https://techub.info/trade/">
     <meta property="og:title" content="【必看】最新交易机会分析报告，限时免费领取！">
     <meta property="og:description" content="立即获取【交易核心策略】的独家策略和分析报告">
-    <meta property="og:url" content="https://trade.techub.news/">
+    <meta property="og:url" content="https://techub.info/trade/">
     <style>
-        /* 基础样式 (保持不变) */
         body, html { 
             margin: 0; 
             padding: 0; 
@@ -20,8 +19,6 @@
             overflow-x: hidden; 
             font-family: Arial, sans-serif; 
         }
-        
-        /* 落地页图片样式 */
         .landing-image { 
             display: block; 
             width: 100%; 
@@ -29,10 +26,6 @@
             /* 重点：让最后一张图片可点击 */
             cursor: pointer; 
         }
-
-        /* ------------------------------------------- */
-        /* 🚀 1. 非悬浮按钮样式 */
-        /* ------------------------------------------- */
         .cta-button {
             display: block; /* 确保按钮独占一行 */
             width: 90%; /* 按钮宽度 */
@@ -50,11 +43,7 @@
             transition: background-color 0.3s;
         }
         .cta-button:hover {
-            background-color: #e64a19; /* 鼠标悬停变深 */
-        }
-        /* ------------------------------------------- */
-        
-        /* 2. 弹窗和关闭按钮样式 (保持不变) */
+            background-color: #e64a19;
         .modal-overlay {
             display: none; 
             position: fixed;
@@ -86,9 +75,9 @@
 </head>
 <body>
 
-    <img src="image1.png" alt="落地页内容第一部分" class="landing-image">
+    <img src="image1.png" alt="零基础学炒币" class="landing-image">
     
-    <img src="image2.png" alt="落地页内容第二部分" class="landing-image" onclick="showModal()">
+    <img src="image2.png" alt="限时9.9" class="landing-image" onclick="showModal()">
 
     <div class="cta-button" onclick="showModal()">
         立即添加好友，获取专属优惠！
@@ -97,37 +86,25 @@
     <div id="popupModal" class="modal-overlay">
         <div class="modal-content">
             <span class="close-button" onclick="closeModal()">&times;</span>
-            <a href="https://a0m.top/0PQJ/J9Z2zQu" target="_blank" onclick="closeModal()">
-                <img src="popup-image.jpg" alt="扫码添加好友" class="popup-img">
+            <a href="https://a1e.fun/0PA3/u9BXF38R" target="_blank" onclick="closeModal()">
+                <img src="popup-image.jpg" alt="零基础炒币" class="popup-img">
             </a>
         </div>
     </div>
 
     <script>
-        // ----------------------------------------------------
-        // 🚀 3. 弹窗触发时间设置 (请在这里修改时间，单位：秒)
-        // ----------------------------------------------------
-        const PAGE_TIME_DELAY_SECONDS = 15;    // 触发条件 1: 页面停留总时长
-        const SCROLL_BOTTOM_DELAY_SECONDS = 5; // 触发条件 2: 滚动到底部停留时长
-        // ----------------------------------------------------
+        const PAGE_TIME_DELAY_SECONDS = 15;
+        const SCROLL_BOTTOM_DELAY_SECONDS = 5;
 
         const modal = document.getElementById('popupModal');
         let modalShown = false;
         let scrollTimer = null;
-        let pageTimerId = null; // 用于保存总时长计时器ID，以便点击后清除
-
-        /**
-         * 统一的弹窗显示函数。
-         * 现在可以通过：总时长、底部停留、点击图片、点击按钮 四种方式触发。
-         */
+        let pageTimerId = null;
         function showModal() {
-            // 如果弹窗已经显示，直接退出
             if (modal.style.display === 'flex') return;
             
             modal.style.display = 'flex';
-            modalShown = true; // 标记为已触发过
-
-            // 清除时间触发相关的计时器，防止重复弹出
+            modalShown = true;
             if (scrollTimer) {
                 clearTimeout(scrollTimer);
                 scrollTimer = null;
@@ -135,14 +112,8 @@
             if (pageTimerId) {
                 clearTimeout(pageTimerId);
             }
-            
-            // 移除滚动监听，因为弹窗已经出来了
             window.removeEventListener('scroll', checkScrollPosition);
         }
-
-        /**
-         * 检查滚动位置，实现“底部停留”逻辑。
-         */
         function checkScrollPosition() {
             if (modalShown) return;
 
@@ -155,15 +126,9 @@
                 scrollTimer = null;
             }
         }
-
-        /**
-         * 关闭弹窗函数
-         */
         function closeModal() {
             modal.style.display = 'none';
         }
-
-        // 页面加载完成时启动时间监听和滚动监听
         window.onload = function() {
             // 触发条件 1: 页面停留总时长计时器。保存 ID
             pageTimerId = setTimeout(showModal, PAGE_TIME_DELAY_SECONDS * 1000);
